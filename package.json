@@ -1,0 +1,94 @@
+{
+  "private": true,
+  "scripts": {
+    "migrate": "yarn prisma migrate dev",
+    "generate": "yarn prisma generate",
+    "dev": "concurrently \"yarn dev:api\" \"yarn dev:src\"",
+    "start:api": "node ./api/dist/api/index.js",
+    "dev:api": "ts-node -P ./api/tsconfig.json -r tsconfig-paths/register ./api/index.ts",
+    "build:api": "tsc --project ./api/tsconfig.json && tsc-alias -p ./api/tsconfig.json",
+    "dev:src": "next dev",
+    "build:src": "next build",
+    "start:src": "next start",
+    "lint:src": "next lint",
+    "format": "yarn lint --fix",
+    "husky-skip": "cross-env HUSKY_SKIP_HOOKS=1",
+    "commit": "git cz",
+    "prepare": "husky install"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "*.md": [
+      "yarn format:md"
+    ]
+  },
+  "dependencies": {
+    "@graphql-tools/schema": "^8.3.1",
+    "@graphql-tools/utils": "^8.6.1",
+    "@middy-graphql/core": "^0.0.1",
+    "@middy-graphql/error": "^0.0.0",
+    "@middy-graphql/validator": "^0.0.0",
+    "@prisma/client": "^3.8.1",
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.19.1",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "express-graphql": "^0.12.0",
+    "graphql": "^16.2.0",
+    "graphql-depth-limit": "^1.1.0",
+    "graphql-iso-date": "^3.6.1",
+    "graphql-query-complexity": "^0.11.0",
+    "graphql-upload": "^13.0.0",
+    "ioredis": "^4.28.3",
+    "joi": "^17.5.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "next": "12.0.8",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.1.0",
+    "@commitlint/config-conventional": "^16.0.0",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/bluebird": "^3.5.36",
+    "@types/body-parser": "^1.19.2",
+    "@types/compression": "^1.7.2",
+    "@types/cookie-parser": "^1.4.2",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/glob": "^7.2.0",
+    "@types/graphql": "^14.5.0",
+    "@types/graphql-iso-date": "^3.4.0",
+    "@types/graphql-upload": "^8.0.10",
+    "@types/ioredis": "^4.28.7",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/lodash": "^4.14.178",
+    "@types/node": "^17.0.10",
+    "@types/react": "17.0.38",
+    "commitizen": "^4.2.4",
+    "concurrently": "^7.0.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "8.7.0",
+    "eslint-config-next": "12.0.8",
+    "husky": "^7.0.4",
+    "nodemon": "^2.0.15",
+    "prisma": "^3.8.1",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.4.0",
+    "tsc-alias": "^1.5.0",
+    "tsconfig-paths": "^3.12.0",
+    "typescript": "4.5.5",
+    "zx": "^4.3.0"
+  }
+}

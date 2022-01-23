@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "noEmit": true,
+    "allowJs": true,
+    "incremental": true,
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "shared": ["./shared"],
+      "shared/*": ["./shared/*"],
+      "~api/*": ["./api/*"]
+    }
+  }
+}
