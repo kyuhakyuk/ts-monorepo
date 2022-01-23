@@ -20,7 +20,6 @@ Here is a list of all the big technologies we use:
 
 ```
 ├── api (graphql server)
-├── middy-graphql (custom graphql framework)
 ├── prisma (database orm)
 ├── public (public files used on the frontend)
 ├── shared (shared libs)
