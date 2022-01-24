@@ -20,6 +20,7 @@ Here is a list of all the big technologies we use:
 
 ```
 ├── api (graphql server)
+├── microservice1 (serverless micro-service)
 ├── prisma (database orm)
 ├── public (public files used on the frontend)
 ├── shared (shared libs)
