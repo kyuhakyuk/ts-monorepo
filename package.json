@@ -35,7 +35,10 @@
     "@middy-graphql/core": "^0.0.1",
     "@middy-graphql/error": "^0.0.0",
     "@middy-graphql/validator": "^0.0.0",
+    "@middy/core": "^3.0.0-alpha.5",
+    "@middy/http-json-body-parser": "^3.0.0-alpha.5",
     "@prisma/client": "^3.8.1",
+    "aws-lambda": "^1.0.7",
     "bcryptjs": "^2.4.3",
     "bluebird": "^3.7.2",
     "body-parser": "^1.19.1",
@@ -60,6 +63,8 @@
   "devDependencies": {
     "@commitlint/cli": "^16.1.0",
     "@commitlint/config-conventional": "^16.0.0",
+    "@serverless/typescript": "^2.71.0",
+    "@types/aws-lambda": "^8.10.91",
     "@types/bcryptjs": "^2.4.2",
     "@types/bluebird": "^3.5.36",
     "@types/body-parser": "^1.19.2",
@@ -85,10 +90,17 @@
     "nodemon": "^2.0.15",
     "prisma": "^3.8.1",
     "rimraf": "^3.0.2",
+    "serverless-bundle": "^5.2.0",
+    "serverless-dotenv-plugin": "^3.12.2",
+    "serverless-dynamodb-local": "^0.2.40",
+    "serverless-offline": "^8.3.1",
+    "serverless-webpack": "^5.6.0",
     "ts-node": "^10.4.0",
     "tsc-alias": "^1.5.0",
     "tsconfig-paths": "^3.12.0",
+    "tsconfig-paths-webpack-plugin": "^3.5.2",
     "typescript": "4.5.5",
+    "webpack-node-externals": "^3.0.0",
     "zx": "^4.3.0"
   }
 }
